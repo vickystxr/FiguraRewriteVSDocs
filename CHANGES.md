@@ -99,3 +99,28 @@ V2
 * Fixed wrong name of `EntityTask:setNbt()`.
 * Added `"neoforge"` to <kbd>Minecraft.clientBrand</kbd>.
 * Added `"Forge"` and `"NeoForge"` to <kbd>Minecraft.serverBrand</kbd>.
+
+V3
+--------------------------------------------------
+* Fixed a few doc banners and added a <samp>&lt;sck></samp> tag to anything related to a removed feature that could be
+  re-enabled.
+* Changed the wrapping column of many descriptions to use the new 120-character column instead.
+* Changed descriptions of `Action:setOnToggle()` and `Action:onToggle()` to avoid second-person language.
+* Removed <kbd>ActionWheelAPI.index</kbd> in favor of just using <kbd>integer</kbd>.
+* Standardized the use of `:setX` methods over `:x` methods and `:onX` over `:setOnX` methods in tutorial descriptions.
+* Removed <kbd>ConfigAPI.validType</kbd> in favor of just using <kbd>any</kbd> or <kbd>unknown</kbd>.
+* Changed the description of `events.SKULL_RENDER`.
+* Fixed the description for `events.TRIDENT_RENDER`.
+* Fixed signature of `Event:remove()` not stating that removing a function directly is allowed.
+* Re-ordered the colors in <kbd>Player.teamInfo.color</kbd> to match Minecraft's order.  
+  This does not change how LuaLS handles it.
+* Added internal class for <kbd>ResourcesAPI</kbd> as it allows indexing as an alternative to running `:get()`.
+* Remove unused documentation for old and removed raycasting functions.
+* Added missing `figuraMetatables` information.
+* Added missing `resources` global.
+* Changed return type of `parseJson()` to <kbd>any</kbd>.
+* Changed return types of `setmetatable()` and `rawset()` to generic <kbd>&lt;T></kbd>.
+* Added missing type names to <kbd>type</kbd>.
+* Changed return type of `math.sign()` to <kbd>integer</kbd>.
+* Removed mention of `require()` returning <kbd>true</kbd> on empty returns as Figura does not do this.
+* Fixed wrong names of Figura screens and added missing Figura screens in <kbd>Minecraft.screenID</kbd>.

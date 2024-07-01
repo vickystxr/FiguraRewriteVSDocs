@@ -178,9 +178,9 @@ function Action:setOnToggle(func) end
 ---
 ---> ***
 ---
----**Note:** I would highly recommend against using `setOnUntoggle` unless your action does something *drastically*
+---**Note:** It is highly recommended to not use `setOnUntoggle` unless this action does something *drastically*
 ---different when toggled off.  
----You already get the state of the toggle in the `setOnToggle` callback, use that with an `if` statement instead.
+---The callback in `setOnToggle` already gets the state of the toggle, use that with an `if` statement instead.
 ---@generic self
 ---@param self self
 ---@param func? Action.untoggleFunc
@@ -391,9 +391,9 @@ function Action:onToggle(func) end
 ---
 ---> ***
 ---
----**Note:** I would highly recommend against using `onUntoggle` unless your action does something *drastically*
----different when toggled off.  
----You already get the state of the toggle in the `onToggle` callback, use that with an `if` statement instead.
+---**Note:** It is highly recommended to not use `onUntoggle` unless this action does something *drastically* different
+---when toggled off.  
+---The callback in `onToggle` already gets the state of the toggle, use that with an `if` statement instead.
 ---@generic self
 ---@param self self
 ---@param func? Action.untoggleFunc

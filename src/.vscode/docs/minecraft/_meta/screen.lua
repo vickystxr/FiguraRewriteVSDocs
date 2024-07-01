@@ -133,15 +133,21 @@
 ---**Minecraft:** Structure Block
 ---| "net.minecraft.class_497"  @ StructureBlockScreen
 ---**Figura:** Avatar Fullscreen View
----| "org.moon.figura.gui.screens.AvatarScreen"
+---| "org.figuramc.figura.gui.screens.AvatarScreen"
+---**Figura:** Avatar Wizard
+---| "org.figuramc.figura.gui.screens.AvatarWizardScreen"
 ---**Figura:** Settings
----| "org.moon.figura.gui.screens.ConfigScreen"
+---| "org.figuramc.figura.gui.screens.ConfigScreen"
+---**Figura:** Help
+---| "org.figuramc.figura.gui.screens.HelpScreen"
 ---**Figura:** Avatar Keybinds
----| "org.moon.figura.gui.screens.KeybindScreen"
+---| "org.figuramc.figura.gui.screens.KeybindScreen"
+---**Figura:** Network Filter
+---| "org.figuramc.figura.gui.screens.NetworkFilterScreen"
+---**Figura:** Permissions
+---| "org.figuramc.figura.gui.screens.PermissionsScreen"
 ---**Figura:** Avatar Sounds
----| "org.moon.figura.gui.screens.SoundScreen"
----**Figura:** Trust
----| "org.moon.figura.gui.screens.TrustScreen"
+---| "org.figuramc.figura.gui.screens.SoundScreen"
 ---**Figura:** Wardrobe
----| "org.moon.figura.gui.screens.WardrobeScreen"
+---| "org.figuramc.figura.gui.screens.WardrobeScreen"
 

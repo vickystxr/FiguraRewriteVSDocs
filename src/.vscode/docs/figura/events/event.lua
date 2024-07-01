@@ -30,12 +30,13 @@ function Event:clear() end
 ---@return self
 function Event:register(func, name) end
 
----Removes *all* functions with the given name from this event.
+---If a function is given, that function is removed from this event.  
+---If a string is given, *all* functions with the given name are removed from this event.
 ---
 ---Returns the amount of removed functions.
----@param name string
+---@param callback string | function
 ---@return integer
-function Event:remove(name) end
+function Event:remove(callback) end
 
 ---===== GETTERS =====---
 
@@ -298,7 +299,7 @@ function EventRender:register(func, name) end
 
 
 ---==================================================================================================================---
----  EVENT.TRIDENTRENDER extends EVENT                                                                                 ---
+---  EVENT.TRIDENTRENDER extends EVENT                                                                               ---
 ---==================================================================================================================---
 
 ---@class Event.TridentRender: Event

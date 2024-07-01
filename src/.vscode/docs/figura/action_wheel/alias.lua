@@ -6,8 +6,6 @@
 ---  ACTIONWHEELAPI                                                                                                  ---
 ---==================================================================================================================---
 
----@alias ActionWheelAPI.index 1|2|3|4|5|6|7|8
-
 ---@alias ActionWheelAPI.clickFunc fun(): boolean?
 
 ---@alias ActionWheelAPI.scrollFunc fun(dir?: number): boolean?

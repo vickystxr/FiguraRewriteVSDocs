@@ -1,6 +1,23 @@
 ---@meta _
 ---@diagnostic disable: duplicate-set-field
 
+---==================================================================================================================---
+---  RESOURCESAPI-INTERNAL                                                                                           ---
+---==================================================================================================================---
+
+---**INTERNAL CLASS**&emsp;*Do not use this!*
+---
+---Contains generic string field for indexing.
+---@class ResourcesAPI.*INTERNAL*
+---A possible file.
+---
+---Both of the following are the same:
+---```lua
+---resources:get("file.ext")
+---resources["file.ext"]
+---```
+---@field [string]? InputStream
+
 
 ---==================================================================================================================---
 ---  RESOURCESAPI                                                                                                    ---
@@ -8,7 +25,7 @@
 
 ---A container for functions involving Avatar resources.
 ---@*error Missing doc string.
----@class ResourcesAPI
+---@class ResourcesAPI: ResourcesAPI.*INTERNAL*
 local ResourcesAPI
 
 

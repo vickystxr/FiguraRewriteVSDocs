@@ -2,25 +2,23 @@
 ---@diagnostic disable: duplicate-set-field
 
 
----==============================================================================================---
----  VANILLAMODELAPI                                                                             ---
----==============================================================================================---
+---==================================================================================================================---
+---  VANILLAMODELAPI                                                                                                 ---
+---==================================================================================================================---
 
 ---An API for handling the vanilla player model.
 ---@class VanillaModelAPI
 ---The entire vanilla player model.
----> `HEAD`, `BODY`, `LEFT_ARM`, `RIGHT_ARM`, `LEFT_LEG`, `RIGHT_LEG`, `HAT`, `JACKET`,
----> `LEFT_SLEEVE`, `RIGHT_SLEEVE`, `LEFT_PANTS`, `RIGHT_PANTS`, `CAPE_MODEL`, `FAKE_CAPE`,
----> `HELMET_ITEM`, `HELMET_HEAD`, `HELMET_HAT`, `CHESTPLATE_BODY`, `CHESTPLATE_LEFT_ARM`,
----> `CHESTPLATE_RIGHT_ARM`, `LEGGINGS_BODY`, `LEGGINGS_LEFT_LEG`, `LEGGINGS_RIGHT_LEG`,
----> `BOOTS_LEFT_LEG`, `BOOTS_RIGHT_LEG`, `LEFT_ELYRTA`, `RIGHT_ELYTRA`, `LEFT_ITEM`, `RIGHT_ITEM`,
----> `LEFT_PARROT`, `RIGHT_PARROT`
+---> `HEAD`, `BODY`, `LEFT_ARM`, `RIGHT_ARM`, `LEFT_LEG`, `RIGHT_LEG`, `HAT`, `JACKET`, `LEFT_SLEEVE`, `RIGHT_SLEEVE`,
+---> `LEFT_PANTS`, `RIGHT_PANTS`, `CAPE_MODEL`, `FAKE_CAPE`, `HELMET_ITEM`, `HELMET_HEAD`, `HELMET_HAT`,
+---> `CHESTPLATE_BODY`, `CHESTPLATE_LEFT_ARM`, `CHESTPLATE_RIGHT_ARM`, `LEGGINGS_BODY`, `LEGGINGS_LEFT_LEG`,
+---> `LEGGINGS_RIGHT_LEG`, `BOOTS_LEFT_LEG`, `BOOTS_RIGHT_LEG`, `LEFT_ELYRTA`, `RIGHT_ELYTRA`, `LEFT_ITEM`,
+---> `RIGHT_ITEM`, `LEFT_PARROT`, `RIGHT_PARROT`
 ---<!--
 ---@field ALL VanillaModelGroup
 ---All armor pieces.
----> `HELMET_ITEM`, `HELMET_HEAD`, `HELMET_HAT`, `CHESTPLATE_BODY`, `CHESTPLATE_LEFT_ARM`,
----> `CHESTPLATE_RIGHT_ARM`, `LEGGINGS_BODY`, `LEGGINGS_LEFT_LEG`, `LEGGINGS_RIGHT_LEG`,
----> `BOOTS_LEFT_LEG`, `BOOTS_RIGHT_LEG`
+---> `HELMET_ITEM`, `HELMET_HEAD`, `HELMET_HAT`, `CHESTPLATE_BODY`, `CHESTPLATE_LEFT_ARM`, `CHESTPLATE_RIGHT_ARM`,
+---> `LEGGINGS_BODY`, `LEGGINGS_LEFT_LEG`, `LEGGINGS_RIGHT_LEG`, `BOOTS_LEFT_LEG`, `BOOTS_RIGHT_LEG`
 ---<!--
 ---@field ARMOR VanillaModelGroup
 ---The player's body.
@@ -127,8 +125,8 @@
 ---<!--
 ---@field PARROTS VanillaModelGroup
 ---Both player model layers and cape.
----> `HEAD`, `BODY`, `LEFT_ARM`, `RIGHT_ARM`, `LEFT_LEG`, `RIGHT_LEG`, `HAT`, `JACKET`,
----> `LEFT_SLEEVE`, `RIGHT_SLEEVE`, `LEFT_PANTS`, `RIGHT_PANTS`, `CAPE_MODEL`, `FAKE_CAPE`
+---> `HEAD`, `BODY`, `LEFT_ARM`, `RIGHT_ARM`, `LEFT_LEG`, `RIGHT_LEG`, `HAT`, `JACKET`, `LEFT_SLEEVE`, `RIGHT_SLEEVE`,
+---> `LEFT_PANTS`, `RIGHT_PANTS`, `CAPE_MODEL`, `FAKE_CAPE`
 ---<!--
 ---@field PLAYER VanillaModelGroup
 ---The player's right arm.

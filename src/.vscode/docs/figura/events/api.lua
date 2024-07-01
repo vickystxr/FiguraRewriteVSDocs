@@ -338,8 +338,7 @@
 ---> ***
 ---> A callback that does nothing special, it just runs whenever the event it is attached to runs.
 ---@field resource_reload Event.Generic | Event.Generic.func
----This event runs before a skull block is rendered.  
----This event runs for each visible skull block.
+---This event runs before each of the avatar owner's skull blocks are rendered.
 ---> ```lua
 ---> (callback) function(delta: number, block?: BlockState, item?: ItemStack, entity?: Entity, ctx: string)
 ---> ```
@@ -347,8 +346,7 @@
 ---> A callback that is given the current tick delta, a block state if the skull is placed, an item stack if the skull
 ---> is being held, or an entity if the skull is being worn, and the context the skull is being rendered in.
 ---@field SKULL_RENDER Event.SkullRender | Event.SkullRender.func
----This event runs before a skull block is rendered.  
----This event runs for each visible skull block.
+---This event runs before each of the avatar owner's skull blocks are rendered.
 ---> ```lua
 ---> (callback) function(delta: number, block?: BlockState, item?: ItemStack, entity?: Entity, ctx: string)
 ---> ```
@@ -370,7 +368,7 @@
 ---> ***
 ---> A callback that does nothing special, it just runs whenever the event it is attached to runs.
 ---@field tick Event.Generic | Event.Generic.func
----This event runs every frame for every arrow the avatar's owner has fired.
+---This event runs every frame for every trident the avatar's owner has thrown.
 ---> ```lua
 ---> (callback) function(delta: number, entity: Entity)
 --->   -> hide: boolean?
@@ -378,10 +376,10 @@
 ---> ***
 ---> A callback that is given the current tick delta and the trident that is being rendered.
 --->
----> Return `true` to completely hide the current arrow.
+---> Return `true` to completely hide the current trident.
 ---@*error Missing doc string.
 ---@field TRIDENT_RENDER Event.TridentRender | Event.TridentRender.func
----This event runs every frame for every arrow the avatar's owner has fired.
+---This event runs every frame for every trident the avatar's owner has thrown.
 ---> ```lua
 ---> (callback) function(delta: number, entity: Entity)
 --->   -> hide: boolean?

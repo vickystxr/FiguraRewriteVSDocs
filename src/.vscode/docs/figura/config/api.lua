@@ -14,13 +14,13 @@ local ConfigAPI
 ---===== METHODS =====---
 
 ---Loads the entire active config file.
----@return {[string]?: ConfigAPI.validType}
+---@return {[string]: any}
 ---@nodiscard
 function ConfigAPI:load() end
 
 ---Loads the given key from the active config file.
 ---@param key string
----@return ConfigAPI.validType?
+---@return any
 ---@nodiscard
 function ConfigAPI:load(key) end
 
@@ -30,7 +30,7 @@ function ConfigAPI:load(key) end
 ---@generic self
 ---@param self self
 ---@param key string
----@param value? ConfigAPI.validType
+---@param value any
 ---@return self
 function ConfigAPI:save(key, value) end
 

@@ -1,17 +1,16 @@
 ---@meta _
 
 
----==============================================================================================---
----  MATH                                                                                        ---
----==============================================================================================---
+---==================================================================================================================---
+---  MATH                                                                                                            ---
+---==================================================================================================================---
 
 ---The factor by which the player is scaled down before being rendered into the world.
 math.playerScale = 0.9375
 
 ---A number that will reverse the `.playerScale` factor.
 ---
----This number is *slightly* off from the exact value. To get the exact value, use
----`1 / math.playerScale`.
+---This number is *extremely close* to the exact value. To get the exact value, use `1 / math.playerScale`.
 math.worldScale = 1.0666666667
 
 ---Restricts the value given to be between the other two numbers.
@@ -24,8 +23,8 @@ function math.clamp(x, min, max) end
 
 ---Linearly interpolates between two numbers, vectors, or matrices.
 ---
----Numbers, vectors, and matrices can go in *any* of the three parameters, but only *one* type of
----vector or matrix may be used maximum.
+---Numbers, vectors, and matrices can go in *any* of the three parameters, but only *one* type of vector or matrix may
+---be used maximum.
 ---
 ---If any vector type is used, the return will be the type of that vector.  
 ---If any matrix type is used, the return will be the type of that matrix.
@@ -51,13 +50,13 @@ function math.clamp(x, min, max) end
 function math.lerp(a, b, t) end
 
 ---Linearly interpolates between two number angles, vector angles, or matrices.  
----The shortest path to the destination angle will always be taken, even if it ends up with the
----result being out of the 0 to 360 (or -180 to 180) bounds.
+---The shortest path to the destination angle will always be taken, even if it ends up with the result being out of the
+---0 to 360 (or -180 to 180) bounds.
 ---
 ---The final number will be reduced modulo 360.
 ---
----Numbers, vectors, and matrices can go in *any* of the three parameters, but only *one* type of
----vector or matrix may be used maximum.
+---Numbers, vectors, and matrices can go in *any* of the three parameters, but only *one* type of vector or matrix may
+---be used maximum.
 ---
 ---If any vector type is used, the return will be the type of that vector.  
 ---If any matrix type is used, the return will be the type of that matrix.
@@ -86,8 +85,8 @@ function math.lerpAngle(a, b, t) end
 
 ---Converts a number, vector, or matrix from one range to another.
 ---
----Numbers, vectors, and matrices can go in *any* of the five parameters, but only *one* type of
----vector or matrix may be used maximum.
+---Numbers, vectors, and matrices can go in *any* of the five parameters, but only *one* type of vector or matrix may be
+---used maximum.
 ---
 ---If any vector type is used, the return will be the type of that vector.  
 ---If any matrix type is used, the return will be the type of that matrix.
@@ -120,11 +119,10 @@ function math.round(x) end
 
 ---Gets the shortest angle between two numbers or vectors.
 ---
----The shortest path to the destination angle will always be taken, even if it ends up with the
----result being out of the -180 to 180 (or 0 to 360) bounds.
+---The shortest path to the destination angle will always be taken, even if it ends up with the result being out of the
+----180 to 180 (or 0 to 360) bounds.
 ---
----Numbers and vectors can go in *any* of the two parameters, but only *one* type of vector may be
----used maximum.
+---Numbers and vectors can go in *either* of the two parameters, but only *one* type of vector may be used maximum.
 ---
 ---If any vector type is used, the return will be the type of that vector.  
 ---If any matrix type is used, the return will be the type of that matrix.
@@ -143,9 +141,6 @@ function math.shortAngle(a, b) end
 ---* `0` returns `0`
 ---* `NaN` returns `-1`
 ---@param x number
----@return
----| -1 # Negative / NaN
----| 0 # Zero
----| 1 # Positive
+---@return integer
 ---@nodiscard
 function math.sign(x) end

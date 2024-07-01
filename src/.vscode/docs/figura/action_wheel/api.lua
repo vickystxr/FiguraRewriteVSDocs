@@ -22,8 +22,8 @@
 ---```lua
 ---local action = page_var:newAction()
 ---
----action:title("Cool title")
----action:item("minecraft:stick")
+---action:setTitle("Cool title")
+---action:setItem("minecraft:stick")
 ---action:onLeftClick(function()
 ---  print("hello world")
 ---end)
@@ -31,8 +31,8 @@
 ---Or create the action and its values at the same time:
 ---```lua
 ---page_var:newAction()
----  :title("Cool title")
----  :item("minecraft:stick")
+---  :setTitle("Cool title")
+---  :setItem("minecraft:stick")
 ---  :onLeftClick(function()
 ---    print("hello world")
 ---  end)
@@ -62,13 +62,13 @@ local ActionWheelAPI
 ---===== METHODS =====---
 
 ---Attempts to execute an action on the current page of the action wheel.  
----This can only execute a `ClickAction`, any other action type will do nothing.
+---This can only execute a "Click" action, any other action type will do nothing.
 ---
 ---If `index` is `nil`, the last selected action is executed.  
 ---If `rightClick` is `true`, it will execute the right-click function instead.
 ---@generic self
 ---@param self self
----@param index? ActionWheelAPI.index
+---@param index? integer
 ---@param rightclick? boolean
 ---@return self
 function ActionWheelAPI:execute(index, rightclick) end
@@ -117,9 +117,9 @@ function ActionWheelAPI:getPage() end
 function ActionWheelAPI:getPage(title) end
 
 ---Gets the index of the currently hovered action.
----@return
----| 0 # None selected
----| ActionWheelAPI.index
+---
+---Returns `0` if nothing is hovered.
+---@return integer
 ---@nodiscard
 function ActionWheelAPI:getSelected() end
 

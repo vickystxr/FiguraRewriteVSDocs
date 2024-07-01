@@ -2,9 +2,9 @@
 ---@diagnostic disable: duplicate-set-field
 
 
----==============================================================================================---
----  VECTORSAPI                                                                                   ---
----==============================================================================================---
+---==================================================================================================================---
+---  VECTORSAPI                                                                                                      ---
+---==================================================================================================================---
 
 ---An API for handling and creating vectors.
 ---@class VectorsAPI
@@ -32,9 +32,8 @@ function VectorsAPI.angleToDir(pitch, yaw) end
 
 ---Parses a hexadecimal string and converts it into a color vector.
 ---
----The `#` is optional and the hex color can have any length, though only the first 6 digits are
----read. If the hex string is 3 digits long, it is treated as a short hex string. (`#ABC` ==
----`#AABBCC`)
+---The `#` is optional and the hex color can have any length, though only the first 6 digits are read. If the hex string
+---is 3 digits long, it is treated as a short hex string. (`#ABC` == `#AABBCC`)
 ---
 ---Returns `⟨0, 0, 0⟩` if the hex string is invalid.
 ---
@@ -251,10 +250,9 @@ function VectorsAPI.vec4(x, y, z, w) end
 
 ---Converts the given world position to a position on the viewing client's screen.
 ---
----The first and second elements of the returned vector are the x and y positions where `-1 .. 1` is
----the range for the edges of the screen.  
----The third element is some value that is `>1.0` when looking at the world position and `<1.0` when
----looking away.  
+---The first and second elements of the returned vector are the x and y positions where `-1 .. 1` is the range for the
+---edges of the screen.  
+---The third element is some value that is `>1.0` when looking at the world position and `<1.0` when looking away.  
 ---The fourth element is the distance of the screen from the world position.
 ---
 ---If `pos` is `nil`, it will default to `⟨0, 0, 0⟩`.

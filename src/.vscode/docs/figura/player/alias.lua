@@ -93,23 +93,23 @@
 ---
 ---`"reset"` is the "unassigned" color.
 ---@field color
----| "aqua"
 ---| "black"
----| "blue"
----| "dark_aqua"
 ---| "dark_blue"
----| "dark_gray"
 ---| "dark_green"
----| "dark_purple"
+---| "dark_aqua"
 ---| "dark_red"
+---| "dark_purple"
 ---| "gold"
 ---| "gray"
+---| "dark_gray"
+---| "blue"
 ---| "green"
----| "light_purple"
+---| "aqua"
 ---| "red"
----| "reset"
----| "white"
+---| "light_purple"
 ---| "yellow"
+---| "white"
+---| "reset"
 ---Whether this team can attack teammates.
 ---@field friendly_fire boolean
 ---Whether this team can see invisible teammates.

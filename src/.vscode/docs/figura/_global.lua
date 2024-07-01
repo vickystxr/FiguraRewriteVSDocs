@@ -773,6 +773,16 @@ figuraMetatables = {
     __tostring = function(self) end
   },
 
+  ---The metatable for `Buffer`.
+  Buffer = {
+    ---@type Buffer
+    __index = {},
+
+    ---@param self Buffer
+    ---@return string string
+    __tostring = function(self) end
+  },
+
   ---The metatable for `ClientAPI`.
   ClientAPI = {
     ---@type ClientAPI
@@ -789,6 +799,16 @@ figuraMetatables = {
     __index = {},
 
     ---@param self ConfigAPI
+    ---@return string string
+    __tostring = function(self) end
+  },
+
+  ---The metatable for `DataAPI`.
+  DataAPI = {
+    ---@type DataAPI
+    __index = {},
+
+    ---@param self DataAPI
     ---@return string string
     __tostring = function(self) end
   },
@@ -828,7 +848,7 @@ figuraMetatables = {
     __tostring = function(self) end,
 
     ---@param self Event
-    ---@return number length
+    ---@return integer length
     __len = function(self) end
   },
 
@@ -849,6 +869,26 @@ figuraMetatables = {
     __tostring = function(self) end
   },
 
+  ---The metatable for `FileAPI`.
+  FileAPI = {
+    ---@type FileAPI
+    __index = {},
+
+    ---@param self FileAPI
+    ---@return string string
+    __tostring = function(self) end
+  },
+
+  ---The metatable for `Future`.
+  Future = {
+    ---@type Future
+    __index = {},
+
+    ---@param self Future
+    ---@return string string
+    __tostring = function(self) end
+  },
+
   ---The metatable for `EventsAPI`.
   HostAPI = {
     ---@type HostAPI
@@ -860,6 +900,46 @@ figuraMetatables = {
     __newindex = function(self, key, value) end,
 
     ---@param self HostAPI
+    ---@return string string
+    __tostring = function(self) end
+  },
+
+  ---The metatable for `HttpAPI`.
+  HttpAPI = {
+    ---@type HttpAPI
+    __index = {},
+
+    ---@param self HttpAPI
+    ---@return string string
+    __tostring = function(self) end
+  },
+
+  ---The metatable for `HttpRequestBuilder`.
+  HttpRequestBuilder = {
+    ---@type HttpRequestBuilder
+    __index = {},
+
+    ---@param self HttpRequestBuilder
+    ---@return string string
+    __tostring = function(self) end
+  },
+
+  ---The metatable for `HttpResponse`.
+  HttpResponse = {
+    ---@type HttpResponse
+    __index = {},
+
+    ---@param self HttpResponse
+    ---@return string string
+    __tostring = function(self) end
+  },
+
+  ---The metatable for `InputStream`.
+  InputStream = {
+    ---@type InputStream
+    __index = {},
+
+    ---@param self InputStream
     ---@return string string
     __tostring = function(self) end
   },
@@ -887,6 +967,105 @@ figuraMetatables = {
     __index = {},
 
     ---@param self ItemTask
+    ---@return string string
+    __tostring = function(self) end
+  },
+
+  ---The metatable for `JsonAPI`.
+  JsonAPI = {
+    ---@type JsonAPI
+    __index = {},
+
+    ---@param self JsonAPI
+    ---@return string string
+    __tostring = function(self) end
+  },
+
+  ---The metatable for `JsonArray`.
+  JsonArray = {
+    ---@param self JsonArray
+    ---@param key any
+    ---@return any value
+    __index = function(self, key) end,
+
+    ---@param self JsonArray
+    ---@param key any
+    ---@param value any
+    __newindex = function(self, key, value) end,
+
+    ---@param self JsonArray
+    ---@return string string
+    __tostring = function(self) end,
+
+    ---@param self JsonArray
+    ---@return integer length
+    __len = function(self) end,
+
+    ---@param self JsonArray
+    ---@return fun(t: JsonArray, k: integer): integer, any
+    ---@return self
+    ---@return integer
+    __pairs = function(self) end,
+
+    ---@param self JsonArray
+    ---@return fun(t: JsonArray, i: integer): integer, any
+    ---@return self
+    ---@return integer
+    __ipairs = function(self) end,
+  },
+
+  ---The metatable for `JsonBuilder`.
+  JsonBuilder = {
+    ---@param self JsonBuilder
+    ---@param key any
+    ---@return any value
+    __index = function(self, key) end,
+
+    ---@param self JsonBuilder
+    ---@param key any
+    ---@param value any
+    __newindex = function(self, key, value) end,
+
+    ---@param self JsonBuilder
+    ---@return string string
+    __tostring = function(self) end
+  },
+
+  ---The metatable for `JsonObject`.
+  JsonObject = {
+    ---@param self JsonObject
+    ---@param key any
+    ---@return any value
+    __index = function(self, key) end,
+
+    ---@param self JsonObject
+    ---@param key any
+    ---@param value any
+    __newindex = function(self, key, value) end,
+
+    ---@param self JsonObject
+    ---@return string string
+    __tostring = function(self) end,
+
+    ---@param self JsonObject
+    ---@return fun(t: JsonObject, k: integer): integer, any
+    ---@return self
+    ---@return integer
+    __pairs = function(self) end,
+
+    ---@param self JsonObject
+    ---@return fun(): nil
+    ---@return self
+    ---@return integer
+    __ipairs = function(self) end,
+  },
+
+  ---The metatable for `JsonSerializer`.
+  JsonSerializer = {
+    ---@type JsonSerializer
+    __index = {},
+
+    ---@param self JsonSerializer
     ---@return string string
     __tostring = function(self) end
   },
@@ -958,7 +1137,7 @@ figuraMetatables = {
     __tostring = function(self) end,
 
     ---@param self Matrix2
-    ---@return number length
+    ---@return integer length
     __len = function(self) end,
 
     ---@param left any
@@ -999,7 +1178,7 @@ figuraMetatables = {
     __tostring = function(self) end,
 
     ---@param self Matrix3
-    ---@return number length
+    ---@return integer length
     __len = function(self) end,
 
     ---@param left any
@@ -1040,7 +1219,7 @@ figuraMetatables = {
     __tostring = function(self) end,
 
     ---@param self Matrix4
-    ---@return number length
+    ---@return integer length
     __len = function(self) end,
 
     ---@param left any
@@ -1113,6 +1292,18 @@ figuraMetatables = {
     __tostring = function(self) end
   },
 
+  ---The metatable for `NetworkingAPI`.
+  NetworkingAPI = {
+    ---@param self NetworkingAPI
+    ---@param key any
+    ---@return any value
+    __index = function(self, key) end,
+
+    ---@param self NetworkingAPI
+    ---@return string string
+    __tostring = function(self) end
+  },
+
   ---The metatable for the null `Entity`.
   NullEntity = {
     ---@param self Entity
@@ -1121,6 +1312,16 @@ figuraMetatables = {
     __index = function(self, key) end,
 
     ---@param self Entity
+    ---@return string string
+    __tostring = function(self) end
+  },
+
+  ---The metatable for `OutputStream`.
+  OutputStream = {
+    ---@type OutputStream
+    __index = {},
+
+    ---@param self OutputStream
     ---@return string string
     __tostring = function(self) end
   },
@@ -1206,6 +1407,16 @@ figuraMetatables = {
     __eq = function(left, right) end
   },
 
+  ---The metatable for `RaycastAPI`.
+  RaycastAPI = {
+    ---@type RaycastAPI
+    __index = {},
+
+    ---@param self RaycastAPI
+    ---@return string string
+    __tostring = function(self) end
+  },
+
   ---The metatable for `RenderTask`.
   RenderTask = {
     ---@type RenderTask
@@ -1232,6 +1443,41 @@ figuraMetatables = {
     ---@return string string
     __tostring = function(self) end
   },
+
+  ---The metatable for `ResourcesAPI`.
+  ResourcesAPI = {
+    ---@param self ResourcesAPI
+    ---@param key any
+    ---@return any value
+    __index = function(self, key) end,
+
+    ---@param self ResourcesAPI
+    ---@return string string
+    __tostring = function(self) end
+  },
+
+  --[[ <sck> If you know what this is and have access to it, add a - to the start of this line to re-enable these.
+
+  ---The metatable for `Socket`.
+  Socket = {
+    ---@type Socket
+    __index = {},
+
+    ---@param self Socket
+    ---@return string string
+    __tostring = function(self) end
+  },
+
+  ---The metatable for `SocketAPI`.
+  SocketAPI = {
+    ---@type SocketAPI
+    __index = {},
+
+    ---@param self SocketAPI
+    ---@return string string
+    __tostring = function(self) end
+  },
+  --]]
 
   ---The metatable for `Sound`.
   Sound = {
@@ -1370,7 +1616,7 @@ figuraMetatables = {
     __tostring = function(self) end,
 
     ---@param self Vector2
-    ---@return number length
+    ---@return integer length
     __len = function(self) end,
 
     ---@param self Vector2
@@ -1435,7 +1681,7 @@ figuraMetatables = {
     __tostring = function(self) end,
 
     ---@param self Vector3
-    ---@return number length
+    ---@return integer length
     __len = function(self) end,
 
     ---@param self Vector3
@@ -1500,7 +1746,7 @@ figuraMetatables = {
     __tostring = function(self) end,
 
     ---@param self Vector4
-    ---@return number length
+    ---@return integer length
     __len = function(self) end,
 
     ---@param self Vector4
@@ -1739,16 +1985,16 @@ particles = {}
 ---Custom-made functions are not an exception. If a ping contains one, it will run its entire
 ---contents like normal.
 ---```lua
----<HOST>                                     <CLIENT>
----├• function pings.coolPing()               ├•function pings.coolPing()
----├•   print("Hello World!")                 ├•  print("Hello World!")
----├¹   myFunction()                          ├²  myFunction()
----└• end                                     └•end
+---<HOST>                                    <CLIENT>
+---├•function pings.coolPing()               ├•function pings.coolPing()
+---├•  print("Hello World!")                 ├•  print("Hello World!")
+---├¹  myFunction()                          ├²  myFunction()
+---└•end                                     └•end
 ---
----1                                          2
----├• function myFunction()                   ├•function myFunction()
----├•   models.MyModel.Head:setVisible(false) ├•  models.MyModel.Head:setVisible(false)
----└• end                                     └•end
+---1                                         2
+---├•function myFunction()                   ├•function myFunction()
+---├•  models.MyModel.Head:setVisible(false) ├•  models.MyModel.Head:setVisible(false)
+---└•end                                     └•end
 ---```
 ---&emsp;  
 ---Pings do have limits. They do not cause clients to magically think they are the host. They are
@@ -1790,6 +2036,9 @@ raycast = {}
 
 ---@type RendererAPI
 renderer = {}
+
+---@type ResourcesAPI
+resources = {}
 
 ---@type SoundAPI
 sounds = {}
@@ -1879,7 +2128,7 @@ function logTable(t, depth, silent) end
 
 ---Converts a JSON string into the appropriate Lua value.
 ---@param json string
----@return (boolean | number | string | table)?
+---@return any
 ---@nodiscard
 function parseJson(json) end
 
